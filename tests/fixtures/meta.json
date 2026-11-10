@@ -1,0 +1,34 @@
+{
+ "librosa": "1.0.0",
+ "numpy": "2.5.4",
+ "notes": [
+  "C4",
+  "A4",
+  "C#3",
+  "Db5",
+  "B-1",
+  "G♯2",
+  "E♭6",
+  "A4+25",
+  "Cbb3"
+ ],
+ "midi_to_note": [
+  "C-1",
+  "A0",
+  "C4",
+  "C♯4",
+  "A4",
+  "G9"
+ ],
+ "midi_to_note_cents": [
+  "C4+25",
+  "A4+40",
+  "B4-40"
+ ],
+ "load_stereo_sr": 44100,
+ "duration_flac": 1.5,
+ "tuning_chirp": -0.46,
+ "tuning_noise": 0.48,
+ "tuning_chord": -0.03999999999999998,
+ "pitch_tuning": 0.0
+}

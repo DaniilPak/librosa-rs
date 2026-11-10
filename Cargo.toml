@@ -1,0 +1,36 @@
+[package]
+name = "librosa-rs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+authors = ["DaniilPak"]
+description = "Pure-Rust audio and music analysis whose numbers match Python's librosa: STFT, mel/MFCC, chroma, CQT, onsets, beat tracking, tempo, YIN/pYIN, HPSS, time-stretch and pitch-shift."
+license = "(MIT OR Apache-2.0) AND ISC AND BSD-3-Clause"
+repository = "https://github.com/DaniilPak/librosa-rs"
+readme = "README.md"
+keywords = ["audio", "music", "dsp", "mfcc", "librosa"]
+categories = ["multimedia::audio", "science", "mathematics"]
+exclude = ["tests/", ".github/"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lib]
+name = "librosa"
+
+[dependencies]
+ndarray = "0.17"
+num-complex = "0.4"
+realfft = "3.5"
+rustfft = "6.4"
+rubato = { version = "5.0", optional = true }
+symphonia = { version = "0.6", features = ["wav", "flac", "mp3", "ogg", "vorbis", "pcm"] }
+
+[features]
+default = []
+## Enables `ResType::Rubato`, a resampler backed by the `rubato` crate.
+rubato = ["dep:rubato"]
+
+[dev-dependencies]
+ndarray-npy = "0.10"
+serde_json = "1"
